@@ -10,4 +10,6 @@
 
 @interface HorseProfileTableViewController : UITableViewController
 
+-(void)setLikedProfiles:(NSArray*)profiles;
+
 @end

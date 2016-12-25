@@ -7,8 +7,11 @@
 //
 
 #import "HorseProfileTableViewController.h"
+#import "HorseProfileTableViewCell.h"
 
-@interface HorseProfileTableViewController ()
+@interface HorseProfileTableViewController () {
+    NSArray *likedProfiles;
+}
 
 @end
 
@@ -32,24 +35,23 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [likedProfiles count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    HorseProfileTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"horseProfile" forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    [cell fromHorseProfile:[likedProfiles objectAtIndex:indexPath.row]];
+
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -94,5 +96,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Set Liked Profiles
+
+-(void)setLikedProfiles:(NSArray *)profiles {
+    likedProfiles = [profiles copy];
+}
 
 @end

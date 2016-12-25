@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   horses.plist
-   Nicker
-
-   Created by Ryan Johnson on 11/19/16.
-   Copyright (c) 2016 johnsonrw82. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<array>
+	<dict>
+		<key>name</key>
+		<string>Arnie</string>
+		<key>location</key>
+		<string>Seattle, WA</string>
+		<key>price</key>
+		<real>7500</real>
+		<key>imageName</key>
+		<string>arnie.jpg</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Nike</string>
+		<key>location</key>
+		<string>Arlington, VA</string>
+		<key>price</key>
+		<real>12000</real>
+		<key>imageName</key>
+		<string>nike.jpg</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ellie</string>
+		<key>location</key>
+		<string>Lexington, KY</string>
+		<key>price</key>
+		<integer>3500</integer>
+		<key>imageName</key>
+		<string>ellie.jpg</string>
+	</dict>
+</array>
 </plist>

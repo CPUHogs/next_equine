@@ -6,17 +6,40 @@
 //  Copyright © 2016 johnsonrw82. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "CPUAppDelegate.h"
+#import "CPUViewController.h"
+#import "HorseProfile.h"
 
-@interface AppDelegate ()
+@interface CPUAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation CPUAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    // init the storyboard
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"CPUViewMain_iphone"
+                                                         bundle:nil];
+
+    // instantiate the view controller from the storyboard
+    self.viewController = [storyBoard instantiateViewControllerWithIdentifier:@"CPUViewController"];
+    UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+
+
+    // read in the horse profiles from the properties list
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"horses"
+                                                          ofType:@"plist"];
+    // pass in the data that will make it to the view model
+    NSArray *arrayOfProfiles = [NSArray arrayWithContentsOfFile:plistPath];
+    [self.viewController initializeData:arrayOfProfiles];
+
+    [self.window setRootViewController:navCon];
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 

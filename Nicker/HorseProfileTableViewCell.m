@@ -6,9 +6,10 @@
 //  Copyright © 2016 johnsonrw82. All rights reserved.
 //
 
-#import "HorseProfileTableCellTableViewCell.h"
+#import "HorseProfile.h"
+#import "HorseProfileTableViewCell.h"
 
-@implementation HorseProfileTableCellTableViewCell
+@implementation HorseProfileTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -19,6 +20,30 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+#pragma mark - Setup
+
+-(void)fromHorseProfile:(HorseProfile *)profile {
+    self.nameLabel.text = profile.name;
+    self.locationLabel.text = profile.location;
+    self.priceLabel.text = [NSString stringWithFormat:@"%.2f", profile.price];
+    // look up the image
+    NSString *imagePath = [[NSBundle mainBundle] pathForResource:profile.imageBaseName
+                                                          ofType:profile.imageType];
+    UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+
+    CGFloat scale = [[UIScreen mainScreen]scale];
+    CGSize newSize = CGSizeMake(83.0, 83.0);
+    /*You can remove the below comment if you dont want to scale the image in retina   device .Dont forget to comment UIGraphicsBeginImageContextWithOptions*/
+    //UIGraphicsBeginImageContext(newSize);
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, scale);
+
+    [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    UIImage* resizedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    self.imageView.image = resizedImage;
 }
 
 @end
