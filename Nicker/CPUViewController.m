@@ -10,8 +10,9 @@
 #import "CPUViewModel.h"
 #import "HorseProfileTableViewController.h"
 
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
 @interface CPUViewController() {
-    CPUViewModel *viewModel;
     NSArray *initProfileData;
 }
 
@@ -24,26 +25,38 @@
     initProfileData = [NSArray arrayWithArray:profileData];
 }
 
+-(void)bindViewModel {
+    [RACObserve(self.viewModel,nameLabelString) subscribeNext:^(NSString* value) {
+        self.nameLabel.text = value;
+    }];
+    [RACObserve(self.viewModel,priceLabelString) subscribeNext:^(NSString* value) {
+        self.priceLabel.text = value;
+    }];
+    [RACObserve(self.viewModel,locationLabelString) subscribeNext:^(NSString* value) {
+        self.locationLabel.text = value;
+    }];
+}
+
 #pragma mark - Action methods
 -(IBAction)likeProfile:(id)sender {
     self.likeToastView.alpha = 0.0f;
     self.likeToastView.hidden = NO;
-    [viewModel likeProfile];
+    [self.viewModel likeProfile];
 
 }
 
 -(IBAction)skipProfile:(id)sender {
-    [viewModel skipProfile];
+    [self.viewModel skipProfile];
 }
 
 -(void)updateView {
     // bind the UI elements
-    self.nameLabel.text = viewModel.nameLabelString;
-    self.priceLabel.text = viewModel.priceLabelString;
-    self.locationLabel.text = viewModel.locationLabelString;
+    //self.nameLabel.text = self.viewModel.nameLabelString;
+    //self.priceLabel.text = self.viewModel.priceLabelString;
+    //self.locationLabel.text = self.viewModel.locationLabelString;
 
     // visible image
-    self.imageView.image = viewModel.visibleImage;
+    self.imageView.image = self.viewModel.visibleImage;
 }
 
 #pragma mark - Delegate callback methods
@@ -51,16 +64,19 @@
     [super viewDidLoad];
 
     // init the view model object for this controller
-    viewModel = [[CPUViewModel alloc] initWithData:initProfileData];
-    viewModel.controller = self;
+    self.viewModel = [[CPUViewModel alloc] initWithData:initProfileData];
+    self.viewModel.controller = self;
 
     // add border to the image view
     self.imageView.layer.masksToBounds = YES;
     [self.imageView.layer setBorderColor:[UIColor blackColor].CGColor];
     [self.imageView.layer setBorderWidth:1.0];
 
+    // bind the view model
+    [self bindViewModel];
+
     // show the next profile
-    [viewModel showNextProfile];
+    [self.viewModel showNextProfile];
 }
 
 
@@ -72,7 +88,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    [(HorseProfileTableViewController*)[segue destinationViewController] setLikedProfiles:viewModel.likedProfiles];
+    [(HorseProfileTableViewController*)[segue destinationViewController] setLikedProfiles:self.viewModel.likedProfiles];
 }
 
 @end

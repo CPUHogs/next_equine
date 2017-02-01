@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class HorseProfile;
+@class CPUViewModel;
 
 @interface CPUViewController : UIViewController
 
@@ -21,6 +22,8 @@
 @property (nonatomic) IBOutlet UIImageView *imageView;
 @property (nonatomic) IBOutlet UIView *likeToastView;
 
+@property (nonatomic) CPUViewModel *viewModel;
+
 // update
 -(void)updateView;
 
@@ -30,6 +33,7 @@
 
 // setup methods
 -(void)initializeData:(NSArray*)profileData;
+-(void)bindViewModel;
 
 @end
 
