@@ -3,12 +3,22 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>gender</key>
+		<string></string>
+		<key>height</key>
+		<string></string>
+		<key>breed</key>
+		<string></string>
+		<key>color</key>
+		<string></string>
 		<key>name</key>
 		<string>Arnie</string>
 		<key>location</key>
 		<string>Seattle, WA</string>
 		<key>price</key>
 		<real>7500</real>
+		<key>birthdate</key>
+		<date>2017-02-08T02:51:01Z</date>
 		<key>imageName</key>
 		<string>arnie.jpg</string>
 	</dict>
@@ -19,6 +29,8 @@
 		<string>Arlington, VA</string>
 		<key>price</key>
 		<real>12000</real>
+		<key>birthdate</key>
+		<date>2017-02-08T02:51:33Z</date>
 		<key>imageName</key>
 		<string>nike.jpg</string>
 	</dict>
@@ -29,6 +41,8 @@
 		<string>Lexington, KY</string>
 		<key>price</key>
 		<integer>3500</integer>
+		<key>birthdate</key>
+		<date>2017-02-08T02:52:02Z</date>
 		<key>imageName</key>
 		<string>ellie.jpg</string>
 	</dict>
