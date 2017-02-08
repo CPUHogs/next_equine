@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@class HorseProfile;
+@class CPUHorseProfile;
 @class CPUViewController;
 
 @interface CPUViewModel : NSObject
@@ -26,8 +26,8 @@
 -(instancetype)initWithData:(NSArray*)profileData;
 
 // methods to add/remove profiles
--(void)addHorseProfile:(HorseProfile*)profile;
--(void)removeHorseProfile:(HorseProfile*)profile;
+-(void)addHorseProfile:(CPUHorseProfile*)profile;
+-(void)removeHorseProfile:(CPUHorseProfile*)profile;
 
 // handler methods
 -(void)likeProfile;

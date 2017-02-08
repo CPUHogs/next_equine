@@ -6,10 +6,10 @@
 //  Copyright © 2016 johnsonrw82. All rights reserved.
 //
 
-#import "HorseProfile.h"
-#import "HorseProfileTableViewCell.h"
+#import "CPUHorseProfile.h"
+#import "CPUHorseProfileTableViewCell.h"
 
-@implementation HorseProfileTableViewCell
+@implementation CPUHorseProfileTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -24,7 +24,7 @@
 
 #pragma mark - Setup
 
--(void)fromHorseProfile:(HorseProfile *)profile {
+-(void)fromHorseProfile:(CPUHorseProfile *)profile {
     self.nameLabel.text = profile.name;
     self.locationLabel.text = profile.location;
     self.priceLabel.text = [NSString stringWithFormat:@"%.2f", profile.price];

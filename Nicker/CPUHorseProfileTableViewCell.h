@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-@class HorseProfile;
+@class CPUHorseProfile;
 
-@interface HorseProfileTableViewCell : UITableViewCell
+@interface CPUHorseProfileTableViewCell : UITableViewCell
 
 @property (nonatomic) IBOutlet UIImageView *thumbnail;
 @property (nonatomic) IBOutlet UILabel *nameLabel;
 @property (nonatomic) IBOutlet UILabel *locationLabel;
 @property (nonatomic) IBOutlet UILabel *priceLabel;
 
--(void)fromHorseProfile:(HorseProfile*) profile;
+-(void)fromHorseProfile:(CPUHorseProfile*) profile;
 
 @end

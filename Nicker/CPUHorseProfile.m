@@ -6,9 +6,9 @@
 //  Copyright © 2016 johnsonrw82. All rights reserved.
 //
 
-#import "HorseProfile.h"
+#import "CPUHorseProfile.h"
 
-@implementation HorseProfile
+@implementation CPUHorseProfile
 
 #pragma mark - Initializer section
 -(instancetype)initWithName:(NSString *)name

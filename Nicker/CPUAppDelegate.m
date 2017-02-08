@@ -8,7 +8,7 @@
 
 #import "CPUAppDelegate.h"
 #import "CPUViewController.h"
-#import "HorseProfile.h"
+#import "CPUHorseProfile.h"
 
 @interface CPUAppDelegate ()
 

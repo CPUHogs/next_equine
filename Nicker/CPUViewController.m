@@ -8,7 +8,7 @@
 
 #import "CPUViewController.h"
 #import "CPUViewModel.h"
-#import "HorseProfileTableViewController.h"
+#import "CPUHorseProfileTableViewController.h"
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
@@ -88,7 +88,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    [(HorseProfileTableViewController*)[segue destinationViewController] setLikedProfiles:self.viewModel.likedProfiles];
+    [(CPUHorseProfileTableViewController*)[segue destinationViewController] setLikedProfiles:self.viewModel.likedProfiles];
 }
 
 @end

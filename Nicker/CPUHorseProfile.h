@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HorseProfile : NSObject
+@interface CPUHorseProfile : NSObject
 
 NS_ASSUME_NONNULL_BEGIN
 

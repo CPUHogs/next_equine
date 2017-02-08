@@ -7,7 +7,7 @@
 //
 
 #import "CPUViewModel.h"
-#import "HorseProfile.h"
+#import "CPUHorseProfile.h"
 #import "CPUViewController.h"
 
 @interface CPUViewModel () {
@@ -24,7 +24,7 @@
 -(instancetype) initWithData:(NSArray*)profileData {
     _horseProfiles = [NSMutableArray array];
     for (NSDictionary *dict in profileData) {
-        HorseProfile *profile = [[HorseProfile alloc] initWithName:[dict objectForKey:@"name"]
+        CPUHorseProfile *profile = [[CPUHorseProfile alloc] initWithName:[dict objectForKey:@"name"]
                                                       withLocation:[dict objectForKey:@"location"]
                                                          withPrice:[[dict objectForKey:@"price"] floatValue]
                                                           hasImage:[dict objectForKey:@"imageName"]];
@@ -45,12 +45,12 @@
 }
 
 #pragma mark - Horse Profile methods
--(void)addHorseProfile:(HorseProfile *)profile {
+-(void)addHorseProfile:(CPUHorseProfile *)profile {
 
     [_horseProfiles addObject:profile];
 }
 
--(void)removeHorseProfile:(HorseProfile *)profile {
+-(void)removeHorseProfile:(CPUHorseProfile *)profile {
     if (_horseProfiles) {
         [_horseProfiles removeObject:profile];
     }
@@ -60,7 +60,7 @@
 -(void)showNextProfile {
     if (nextIndex < [self.horseProfiles count]) {
         // show the profile to the user (set the ui elements)
-        HorseProfile *profile = [self.horseProfiles objectAtIndex:nextIndex];
+        CPUHorseProfile *profile = [self.horseProfiles objectAtIndex:nextIndex];
         self.nameLabelString = [profile name];
         self.locationLabelString = [profile location];
         self.priceLabelString = [NSString stringWithFormat:@"%.2f",[profile price]];

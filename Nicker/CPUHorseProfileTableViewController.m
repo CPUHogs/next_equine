@@ -6,16 +6,16 @@
 //  Copyright © 2016 johnsonrw82. All rights reserved.
 //
 
-#import "HorseProfileTableViewController.h"
-#import "HorseProfileTableViewCell.h"
+#import "CPUHorseProfileTableViewController.h"
+#import "CPUHorseProfileTableViewCell.h"
 
-@interface HorseProfileTableViewController () {
+@interface CPUHorseProfileTableViewController () {
     NSArray *likedProfiles;
 }
 
 @end
 
-@implementation HorseProfileTableViewController
+@implementation CPUHorseProfileTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,7 +44,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HorseProfileTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"horseProfile" forIndexPath:indexPath];
+    CPUHorseProfileTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"horseProfile" forIndexPath:indexPath];
     
     // Configure the cell...
     [cell fromHorseProfile:[likedProfiles objectAtIndex:indexPath.row]];

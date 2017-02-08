@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HorseProfileTableViewController : UITableViewController
+@interface CPUHorseProfileTableViewController : UITableViewController
 
 -(void)setLikedProfiles:(NSArray*)profiles;
 

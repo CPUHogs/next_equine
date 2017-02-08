@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class HorseProfile;
+@class CPUHorseProfile;
 @class CPUViewModel;
 
 @interface CPUViewController : UIViewController
