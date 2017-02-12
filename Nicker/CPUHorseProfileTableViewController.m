@@ -8,6 +8,7 @@
 
 #import "CPUHorseProfileTableViewController.h"
 #import "CPUHorseProfileTableViewCell.h"
+#import "CPUHorseDetailViewController.h"
 
 @interface CPUHorseProfileTableViewController () {
     NSArray *likedProfiles;
@@ -52,6 +53,15 @@
     return cell;
 }
 
+// if I select the row at this index, print out the profile data to the log
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CPUHorseProfile *selectedProfile = [likedProfiles objectAtIndex:[indexPath row]];
+    if (selectedProfile) {
+        NSLog(@"%@",selectedProfile);
+    }
+    CPUHorseDetailViewController *detailView = [[CPUHorseDetailViewController alloc] initWithNibName:@"CPUHorseProfileDetailView" bundle:nil];
+    [[self navigationController] pushViewController:detailView animated:YES];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -87,6 +97,7 @@
 }
 */
 
+
 /*
 #pragma mark - Navigation
 
@@ -94,8 +105,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-}
-*/
+}*/
+
 
 #pragma mark - Set Liked Profiles
 

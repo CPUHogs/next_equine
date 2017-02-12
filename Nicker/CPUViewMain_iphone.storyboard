@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ppq-66-uqU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ppq-66-uqU">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -111,32 +111,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="List"/>
                                 <connections>
-                                    <segue destination="4Va-Th-qu6" kind="show" id="X4D-qs-Op1"/>
+                                    <segue destination="4Va-Th-qu6" kind="show" id="mZp-OM-Cnw"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pao-1T-aIJ">
-                                <rect key="frame" x="86" y="295" width="240" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e78-Tw-jJ0">
-                                        <rect key="frame" x="35" y="6" width="170" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Liked!">
-                                                <attributes>
-                                                    <font key="NSFont" size="30" name="Helvetica-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.75587140261289409" blue="0.76142836361494082" alpha="0.67883472711267601" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -144,7 +121,6 @@
                     <connections>
                         <outlet property="imageView" destination="IUK-fC-kdD" id="MNv-fB-CB3"/>
                         <outlet property="likeButton" destination="LaV-R5-TUF" id="fTe-jY-2XU"/>
-                        <outlet property="likeToastView" destination="pao-1T-aIJ" id="1ej-wY-vSH"/>
                         <outlet property="locationLabel" destination="etG-P3-Sl5" id="XZ3-oQ-lXG"/>
                         <outlet property="nameLabel" destination="T33-E3-nc8" id="YBw-Cc-fYa"/>
                         <outlet property="priceLabel" destination="Zft-Nf-uNQ" id="jnz-xu-x2p"/>
@@ -159,13 +135,13 @@
         <!--Horse Profile Table View Controller-->
         <scene sceneID="PS6-Xu-vQM">
             <objects>
-                <tableViewController storyboardIdentifier="HorseProfileTableViewController" id="4Va-Th-qu6" customClass="HorseProfileTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HorseProfileTableViewController" id="4Va-Th-qu6" customClass="CPUHorseProfileTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" id="mlu-UY-bsY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="horseProfile" rowHeight="83" id="Mkc-1h-noP" customClass="HorseProfileTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="horseProfile" rowHeight="83" id="Mkc-1h-noP" customClass="CPUHorseProfileTableViewCell">
                                 <rect key="frame" x="0.0" y="28" width="414" height="83"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mkc-1h-noP" id="FoA-p2-5MK">
@@ -194,7 +170,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6mG-hW-Olb">
-                                            <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="83" height="82"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zT9-dy-kMX">

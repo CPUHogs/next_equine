@@ -17,7 +17,7 @@ typedef enum {
     STALLION,
     COLT,
     FILLY,
-    UNKNOWN
+    UNKNOWN_GENDER
 } HorseGender;
 
 +(HorseGender)fromString:(NSString*)gender;

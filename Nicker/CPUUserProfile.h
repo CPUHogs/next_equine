@@ -37,5 +37,4 @@
                   withEmailAddress:(NSString*)emailAddress
                    withPhoneNumber:(NSString*)phoneNumber;
 
-
 @end

@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CPUHorseGender.h"
+#import "CPUHorseColor.h"
 
 @interface CPUHorseProfile : NSObject
 
@@ -17,10 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) float price;
 @property (nonatomic, readonly) int age;
 @property (nonatomic) NSDate* birthDate;
-@property (nonatomic) NSString* gender; // TODO: make this an enum
+@property (nonatomic) HorseGender gender; // TODO: make this an enum
 @property (nonatomic) float height;
 @property (nonatomic) NSString* breed; // TODO: make this an enum
-@property (nonatomic) NSString* color;
+@property (nonatomic) HorseColor color;
 @property (nonatomic) NSMutableArray* disciplines;
 
 @property (nonatomic) NSUUID* ownerId; // ID of the owner of this horse (seller?)
@@ -35,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
                   withPrice:(float)price
                    hasImage:(NSString* _Nullable)imageName;
 
+-(instancetype _Nullable)initWithProfile:(CPUHorseProfile*)profile;
 NS_ASSUME_NONNULL_END
 
 @end

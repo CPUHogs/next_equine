@@ -31,7 +31,7 @@
         [NSException raise:NSGenericException format:@"Unknown gender type."];
     }
 
-    return UNKNOWN;
+    return UNKNOWN_GENDER;
 }
 
 +(NSString*)genderAsString:(HorseGender)gender {

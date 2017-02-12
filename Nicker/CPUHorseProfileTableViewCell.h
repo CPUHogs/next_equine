@@ -11,6 +11,7 @@
 
 @interface CPUHorseProfileTableViewCell : UITableViewCell
 
+@property (nonatomic,readonly) CPUHorseProfile *profileObject;
 @property (nonatomic) IBOutlet UIImageView *thumbnail;
 @property (nonatomic) IBOutlet UILabel *nameLabel;
 @property (nonatomic) IBOutlet UILabel *locationLabel;

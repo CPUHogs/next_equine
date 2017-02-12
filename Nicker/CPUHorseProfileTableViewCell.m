@@ -25,6 +25,9 @@
 #pragma mark - Setup
 
 -(void)fromHorseProfile:(CPUHorseProfile *)profile {
+    // set the source profile object
+    _profileObject = [[CPUHorseProfile alloc] initWithProfile:profile];
+
     self.nameLabel.text = profile.name;
     self.locationLabel.text = profile.location;
     self.priceLabel.text = [NSString stringWithFormat:@"%.2f", profile.price];
