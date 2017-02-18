@@ -8,6 +8,7 @@
 
 #import "CPUHorseProfile.h"
 #import "CPUHorseProfileTableViewCell.h"
+#import "CPUUtilFunctions.h"
 
 @implementation CPUHorseProfileTableViewCell
 
@@ -32,9 +33,7 @@
     self.locationLabel.text = profile.location;
     self.priceLabel.text = [NSString stringWithFormat:@"%.2f", profile.price];
     // look up the image
-    NSString *imagePath = [[NSBundle mainBundle] pathForResource:profile.imageBaseName
-                                                          ofType:profile.imageType];
-    UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+    UIImage* image = [CPUUtilFunctions loadImageResource:profile.imageName];
 
     CGFloat scale = [[UIScreen mainScreen]scale];
     CGSize newSize = CGSizeMake(83.0, 83.0);

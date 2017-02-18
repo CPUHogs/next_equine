@@ -12,11 +12,15 @@
         <!--Navigation Controller-->
         <scene sceneID="YtR-mh-aSz">
             <objects>
-                <navigationController id="ppq-66-uqU" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="ppq-66-uqU" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qh2-Hy-eHi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="oJN-oZ-Z7u">
+                        <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Kyu-P2-Md4" kind="relationship" relationship="rootViewController" id="igz-nF-o3E"/>
                     </connections>
@@ -170,7 +174,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6mG-hW-Olb">
-                                            <rect key="frame" x="0.0" y="0.0" width="83" height="82"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="83" height="81"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zT9-dy-kMX">
@@ -195,6 +199,7 @@
                             <outlet property="delegate" destination="4Va-Th-qu6" id="iMp-wA-Iff"/>
                         </connections>
                     </tableView>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ej-PS-X2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

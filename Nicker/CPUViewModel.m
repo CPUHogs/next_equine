@@ -9,6 +9,7 @@
 #import "CPUViewModel.h"
 #import "CPUHorseProfile.h"
 #import "CPUViewController.h"
+#import "CPUUtilFunctions.h"
 
 @interface CPUViewModel () {
     NSMutableArray *_horseProfiles;
@@ -24,10 +25,11 @@
 -(instancetype) initWithData:(NSArray*)profileData {
     _horseProfiles = [NSMutableArray array];
     for (NSDictionary *dict in profileData) {
-        CPUHorseProfile *profile = [[CPUHorseProfile alloc] initWithName:[dict objectForKey:@"name"]
-                                                      withLocation:[dict objectForKey:@"location"]
-                                                         withPrice:[[dict objectForKey:@"price"] floatValue]
-                                                          hasImage:[dict objectForKey:@"imageName"]];
+        CPUHorseProfile *profile =
+        [[CPUHorseProfile alloc] initWithName:[dict objectForKey:@"name"]
+                                 withLocation:[dict objectForKey:@"location"]
+                                    withPrice:[[dict objectForKey:@"price"] floatValue]
+                                     hasImage:[dict objectForKey:@"imageName"]];
 
         if (profile) {
             [_horseProfiles addObject:profile];
@@ -64,14 +66,8 @@
         self.nameLabelString = [profile name];
         self.locationLabelString = [profile location];
         self.priceLabelString = [NSString stringWithFormat:@"%.2f",[profile price]];
-        // load the image
-        NSString *imagePath = [[NSBundle mainBundle] pathForResource:[profile imageBaseName]
-                                                              ofType:[profile imageType]];
-        //[self.imageView setImage:[UIImage imageWithContentsOfFile:imagePath]];
-        self.visibleImage = [UIImage imageWithContentsOfFile:imagePath];
-
-        // todo: find a better way to relay info back
-        [self.controller updateView];
+        // set the visible image name
+        self.visibleImageName = [profile imageName];
 
         NSLog(@"%@", profile);
         nextIndex++;

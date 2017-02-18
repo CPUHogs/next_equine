@@ -10,6 +10,7 @@
 
 @interface CPUHorseProfileTableViewController : UITableViewController
 
+// set the list of liked profiles so the user can browse them
 -(void)setLikedProfiles:(NSArray*)profiles;
 
 @end

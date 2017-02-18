@@ -9,16 +9,17 @@
 /* Begin PBXBuildFile section */
 		2B4160E5A7487F9D9D7C607D /* libPods-Nicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1378179BA2F933A363B26633 /* libPods-Nicker.a */; };
 		610CB1BA1E4FC41F0009FA24 /* CPUHorseColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CB1B91E4FC41F0009FA24 /* CPUHorseColor.m */; };
-		610CB1BE1E4FCA250009FA24 /* CPUHorseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CB1BD1E4FCA250009FA24 /* CPUHorseDetailViewController.m */; };
 		610CB1C11E4FD4C50009FA24 /* CPUHorseDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 610CB1C01E4FD4C50009FA24 /* CPUHorseDetailViewModel.m */; };
 		610CB1C31E4FD8A50009FA24 /* CPUHorseProfileDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 610CB1C21E4FD8A50009FA24 /* CPUHorseProfileDetailView.xib */; };
 		61B0D8201E4AAC3C006DAE21 /* CPUUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B0D81F1E4AAC3C006DAE21 /* CPUUserProfile.m */; };
 		61B0D8231E4AC2DA006DAE21 /* CPUHorseGender.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B0D8221E4AC2DA006DAE21 /* CPUHorseGender.m */; };
+		61B7D81F1E58F2E20099C62B /* CPUUtilFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B7D81E1E58F2E20099C62B /* CPUUtilFunctions.m */; };
 		61C3739F1DE1456D00151548 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C3739E1DE1456D00151548 /* main.m */; };
 		61C373A21DE1456D00151548 /* CPUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C373A11DE1456D00151548 /* CPUAppDelegate.m */; };
 		61C373A51DE1456D00151548 /* CPUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C373A41DE1456D00151548 /* CPUViewController.m */; };
 		61C373AA1DE1456D00151548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C373A91DE1456D00151548 /* Assets.xcassets */; };
 		61C373AD1DE1456D00151548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C373AB1DE1456D00151548 /* LaunchScreen.storyboard */; };
+		61CF67F81E57F26E0068A491 /* CPUHorseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CF67F71E57F26E0068A491 /* CPUHorseDetailViewController.m */; };
 		61F0B86B1DE1749E00287E36 /* launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61F0B86A1DE1749E00287E36 /* launch.jpg */; };
 		61F0B86F1DE177D300287E36 /* CPUHorseProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F0B86E1DE177D300287E36 /* CPUHorseProfile.m */; };
 		61F0B8711DE17FBE00287E36 /* horses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61F0B8701DE17FBE00287E36 /* horses.plist */; };
@@ -36,8 +37,6 @@
 		20181824AFDE9C688AE28AE8 /* Pods-Nicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nicker/Pods-Nicker.debug.xcconfig"; sourceTree = "<group>"; };
 		610CB1B81E4FC41F0009FA24 /* CPUHorseColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUHorseColor.h; sourceTree = "<group>"; };
 		610CB1B91E4FC41F0009FA24 /* CPUHorseColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUHorseColor.m; sourceTree = "<group>"; };
-		610CB1BC1E4FCA250009FA24 /* CPUHorseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUHorseDetailViewController.h; sourceTree = "<group>"; };
-		610CB1BD1E4FCA250009FA24 /* CPUHorseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUHorseDetailViewController.m; sourceTree = "<group>"; };
 		610CB1BF1E4FD4C50009FA24 /* CPUHorseDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUHorseDetailViewModel.h; sourceTree = "<group>"; };
 		610CB1C01E4FD4C50009FA24 /* CPUHorseDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUHorseDetailViewModel.m; sourceTree = "<group>"; };
 		610CB1C21E4FD8A50009FA24 /* CPUHorseProfileDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPUHorseProfileDetailView.xib; sourceTree = "<group>"; };
@@ -45,6 +44,8 @@
 		61B0D81F1E4AAC3C006DAE21 /* CPUUserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUUserProfile.m; sourceTree = "<group>"; };
 		61B0D8211E4AC2DA006DAE21 /* CPUHorseGender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUHorseGender.h; sourceTree = "<group>"; };
 		61B0D8221E4AC2DA006DAE21 /* CPUHorseGender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUHorseGender.m; sourceTree = "<group>"; };
+		61B7D81D1E58F2E20099C62B /* CPUUtilFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUUtilFunctions.h; sourceTree = "<group>"; };
+		61B7D81E1E58F2E20099C62B /* CPUUtilFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUUtilFunctions.m; sourceTree = "<group>"; };
 		61C3739A1DE1456D00151548 /* Nicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61C3739E1DE1456D00151548 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		61C373A01DE1456D00151548 /* CPUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPUAppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +55,8 @@
 		61C373A91DE1456D00151548 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61C373AC1DE1456D00151548 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61C373AE1DE1456D00151548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61CF67F61E57F26E0068A491 /* CPUHorseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUHorseDetailViewController.h; sourceTree = "<group>"; };
+		61CF67F71E57F26E0068A491 /* CPUHorseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUHorseDetailViewController.m; sourceTree = "<group>"; };
 		61F0B86A1DE1749E00287E36 /* launch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch.jpg; sourceTree = "<group>"; };
 		61F0B86D1DE177D300287E36 /* CPUHorseProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUHorseProfile.h; sourceTree = "<group>"; };
 		61F0B86E1DE177D300287E36 /* CPUHorseProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUHorseProfile.m; sourceTree = "<group>"; };
@@ -94,6 +97,15 @@
 			name = ViewModels;
 			sourceTree = "<group>";
 		};
+		61B7D81C1E58F2910099C62B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				61B7D81D1E58F2E20099C62B /* CPUUtilFunctions.h */,
+				61B7D81E1E58F2E20099C62B /* CPUUtilFunctions.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		61C373911DE1456D00151548 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +144,7 @@
 		61C3739D1DE1456D00151548 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				61B7D81C1E58F2910099C62B /* Util */,
 				61F0B86C1DE1751E00287E36 /* images */,
 				61C3739E1DE1456D00151548 /* main.m */,
 				61F0B8701DE17FBE00287E36 /* horses.plist */,
@@ -162,12 +175,12 @@
 		61F0B8AC1DE282AE00287E36 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				61CF67F61E57F26E0068A491 /* CPUHorseDetailViewController.h */,
+				61CF67F71E57F26E0068A491 /* CPUHorseDetailViewController.m */,
 				61C373A31DE1456D00151548 /* CPUViewController.h */,
 				61C373A41DE1456D00151548 /* CPUViewController.m */,
 				61F0B8B61DE295B100287E36 /* CPUHorseProfileTableViewController.h */,
 				61F0B8B71DE295B100287E36 /* CPUHorseProfileTableViewController.m */,
-				610CB1BC1E4FCA250009FA24 /* CPUHorseDetailViewController.h */,
-				610CB1BD1E4FCA250009FA24 /* CPUHorseDetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -335,11 +348,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61CF67F81E57F26E0068A491 /* CPUHorseDetailViewController.m in Sources */,
 				610CB1C11E4FD4C50009FA24 /* CPUHorseDetailViewModel.m in Sources */,
 				61B0D8201E4AAC3C006DAE21 /* CPUUserProfile.m in Sources */,
 				61C373A51DE1456D00151548 /* CPUViewController.m in Sources */,
 				61F0B8B81DE295B100287E36 /* CPUHorseProfileTableViewController.m in Sources */,
-				610CB1BE1E4FCA250009FA24 /* CPUHorseDetailViewController.m in Sources */,
 				61C373A21DE1456D00151548 /* CPUAppDelegate.m in Sources */,
 				61F0B8B01DE282FB00287E36 /* CPUViewModel.m in Sources */,
 				61B0D8231E4AC2DA006DAE21 /* CPUHorseGender.m in Sources */,
@@ -347,6 +360,7 @@
 				61F0B8B51DE291FE00287E36 /* CPUHorseProfileTableViewCell.m in Sources */,
 				610CB1BA1E4FC41F0009FA24 /* CPUHorseColor.m in Sources */,
 				61F0B86F1DE177D300287E36 /* CPUHorseProfile.m in Sources */,
+				61B7D81F1E58F2E20099C62B /* CPUUtilFunctions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

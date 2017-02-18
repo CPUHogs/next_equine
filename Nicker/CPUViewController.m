@@ -9,6 +9,7 @@
 #import "CPUViewController.h"
 #import "CPUViewModel.h"
 #import "CPUHorseProfileTableViewController.h"
+#import "CPUUtilFunctions.h"
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
@@ -35,6 +36,15 @@
     [RACObserve(self.viewModel,locationLabelString) subscribeNext:^(NSString* value) {
         self.locationLabel.text = value;
     }];
+
+    // image binding
+    [RACObserve(self.viewModel, visibleImageName) subscribeNext:^(NSString* value) {
+        // load the image and display it
+        UIImage *loadedImage = [CPUUtilFunctions loadImageResource:value];
+        if (loadedImage) {
+            self.imageView.image = loadedImage;
+        }
+    }];
 }
 
 #pragma mark - Action methods
@@ -49,15 +59,6 @@
     [self.viewModel skipProfile];
 }
 
--(void)updateView {
-    // bind the UI elements
-    //self.nameLabel.text = self.viewModel.nameLabelString;
-    //self.priceLabel.text = self.viewModel.priceLabelString;
-    //self.locationLabel.text = self.viewModel.locationLabelString;
-
-    // visible image
-    self.imageView.image = self.viewModel.visibleImage;
-}
 
 #pragma mark - Delegate callback methods
 - (void)viewDidLoad {
@@ -65,7 +66,6 @@
 
     // init the view model object for this controller
     self.viewModel = [[CPUViewModel alloc] initWithData:initProfileData];
-    self.viewModel.controller = self;
 
     // add border to the image view
     self.imageView.layer.masksToBounds = YES;

@@ -24,9 +24,6 @@
 
 @property (nonatomic) CPUViewModel *viewModel;
 
-// update
--(void)updateView;
-
 // IBActions
 -(IBAction)likeProfile:(id)sender;
 -(IBAction)skipProfile:(id)sender;

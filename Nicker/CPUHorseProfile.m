@@ -94,15 +94,6 @@
     self.price = price;
     self.imageName = imageName;
 
-    NSArray *imageParts = [self.imageName componentsSeparatedByString:@"."];
-    _imageBaseName = [imageParts objectAtIndex:0];
-    if ([imageParts count] == 2) {
-        _imageType = [imageParts objectAtIndex:1];
-    }
-    else {
-        result = NO;
-    }
-
     // get the years from the date difference
     self.birthDate = birthdate;
     NSDateComponents* components;

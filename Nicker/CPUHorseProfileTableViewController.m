@@ -56,11 +56,13 @@
 // if I select the row at this index, print out the profile data to the log
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     CPUHorseProfile *selectedProfile = [likedProfiles objectAtIndex:[indexPath row]];
+    // if the profile is valid, push the new view controller onto the navigation controller
     if (selectedProfile) {
-        NSLog(@"%@",selectedProfile);
+        CPUHorseDetailViewController *detailView = [[CPUHorseDetailViewController alloc] initWithNibName:@"CPUHorseProfileDetailView" bundle:nil];
+        // set the profile
+        [detailView setHorseProfile:selectedProfile];
+        [[self navigationController] pushViewController:detailView animated:YES];
     }
-    CPUHorseDetailViewController *detailView = [[CPUHorseDetailViewController alloc] initWithNibName:@"CPUHorseProfileDetailView" bundle:nil];
-    [[self navigationController] pushViewController:detailView animated:YES];
 }
 
 /*

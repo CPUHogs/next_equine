@@ -19,8 +19,7 @@
 @property (nonatomic) NSString *nameLabelString;
 @property (nonatomic) NSString *locationLabelString;
 @property (nonatomic) NSString *priceLabelString;
-@property (nonatomic) UIImage *visibleImage;
-@property (nonatomic) CPUViewController *controller;
+@property (nonatomic) NSString *visibleImageName;
 
 // init methods
 -(instancetype)initWithData:(NSArray*)profileData;

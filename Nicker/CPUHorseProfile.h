@@ -28,8 +28,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSUUID* ownerId; // ID of the owner of this horse (seller?)
 
 @property (nonatomic, nullable) NSString *imageName;
-@property (nonatomic, readonly) NSString *imageType;
-@property (nonatomic, readonly) NSString *imageBaseName;
 
 -(NSString*)description;
 -(instancetype _Nullable)initWithName:(NSString*)name
