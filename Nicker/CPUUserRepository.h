@@ -14,6 +14,8 @@
 
 @property (nonatomic, copy) NSDictionary* users;
 
++(instancetype)getInstance;
 +(void)initFromPlist:(NSString*)plistPath;
+-(CPUUserProfile*)profileWithUsername:(NSString*)username;
 
 @end

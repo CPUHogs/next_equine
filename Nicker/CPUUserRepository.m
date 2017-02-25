@@ -9,8 +9,9 @@
 #import "CPUUserRepository.h"
 #import "CPUUserProfile.h"
 
-@interface CPUUserProfile () {
+@interface CPUUserRepository () {
     NSMutableDictionary *_users;
+    NSMutableDictionary *_usernameToId;
     CPUUserRepository *_instance;
 }
 
@@ -20,9 +21,18 @@
 
 @implementation CPUUserRepository
 
-#pragma mark - Initialization
+static CPUUserRepository *repositoryPtr = nil;
+
+#pragma mark Initialization
++(instancetype)getInstance {
+    if (!repositoryPtr) {
+        [NSException raise:NSGenericException format:@"User repository must be initialized prior to use!"];
+        return nil;
+    }
+    return repositoryPtr;
+}
+
 +(void)initFromPlist:(NSString *)plistPath {
-    static CPUUserRepository *repositoryPtr = nil;
     static dispatch_once_t once_token;
 
     dispatch_once(&once_token, ^{
@@ -30,10 +40,21 @@
     });
 }
 
+-(CPUUserProfile*) profileWithUsername:(NSString *)username {
+    NSString* userId = [_usernameToId valueForKey:username];
+    if (userId) {
+        return [_users valueForKey:userId];
+    }
+
+    return nil;
+}
+
+#pragma mark Private methods
 -(instancetype)init:(NSString*) plistPath {
     if (self = [super init]) {
 
         _users = [NSMutableDictionary dictionary];
+        _usernameToId = [NSMutableDictionary dictionary];
 
         NSArray* dicts = [NSArray arrayWithContentsOfFile:plistPath];
 
@@ -52,6 +73,9 @@
                 // pull out the ID from the new profile and store it in the dictionary
                 [_users setValue:profile
                           forKey:[NSString stringWithFormat:@"%@",[profile userId]]];
+                // hash the user ID woth the username
+                [_usernameToId setValue:[NSString stringWithFormat:@"%@",[profile userId]]
+                                                            forKey:[profile userName]];
             }
             else {
                 NSLog(@"ERROR: Unable to load user profile");

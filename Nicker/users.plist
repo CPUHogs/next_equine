@@ -3,7 +3,7 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>userName</key>
+		<key>username</key>
 		<string>ssmith123</string>
 		<key>firstName</key>
 		<string>Shelly</string>

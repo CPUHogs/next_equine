@@ -19,10 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) float price;
 @property (nonatomic, readonly) int age;
 @property (nonatomic) NSDate* birthDate;
-@property (nonatomic) HorseGender gender; // TODO: make this an enum
+@property (nonatomic) HorseGender gender;
 @property (nonatomic) float height;
 @property (nonatomic) NSString* breed; // TODO: make this an enum
 @property (nonatomic) HorseColor color;
+@property (nonatomic) NSString* ownerUsername;
 @property (nonatomic) NSMutableArray* disciplines;
 
 @property (nonatomic) NSUUID* ownerId; // ID of the owner of this horse (seller?)

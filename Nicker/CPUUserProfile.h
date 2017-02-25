@@ -37,4 +37,7 @@
                   withEmailAddress:(NSString*)emailAddress
                    withPhoneNumber:(NSString*)phoneNumber;
 
+#pragma mark - Description
+-(NSString*)description;
+
 @end

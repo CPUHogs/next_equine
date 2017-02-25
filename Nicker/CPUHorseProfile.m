@@ -22,6 +22,7 @@
         withBreed:(NSString*)breed
         withColor:(HorseColor)color
   withDisciplines:(NSArray*)disciplines
+withOwnerUsername:(NSString*)ownerUsername
     withImageName:(NSString*)imageName;
 
 @end
@@ -43,6 +44,7 @@
                     withBreed:@"Breed"
                     withColor:WHITE
               withDisciplines:nil
+            withOwnerUsername:@"johndoe123"
                 withImageName:imageName]) {
             return nil;
         }
@@ -65,6 +67,7 @@
                     withBreed:profile.breed
                     withColor:profile.color
               withDisciplines:profile.disciplines
+            withOwnerUsername:profile.ownerUsername
                 withImageName:profile.imageName]) {
             return nil;
         }
@@ -85,6 +88,7 @@
         withBreed:(NSString *)breed
         withColor:(HorseColor)color
   withDisciplines:(NSArray *)disciplines
+withOwnerUsername:(NSString*)ownerUsername
     withImageName:(NSString*)imageName {
 
     BOOL result = YES;
@@ -109,6 +113,8 @@
     if (disciplines != nil) {
         self.disciplines = [NSMutableArray arrayWithArray:disciplines];
     }
+
+    self.ownerUsername = ownerUsername;
 
     // need to validate this for formatting
     self.height = height;

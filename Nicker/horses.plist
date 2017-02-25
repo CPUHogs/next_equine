@@ -25,6 +25,8 @@
 		<string></string>
 		<key>imageName</key>
 		<string>arnie.jpg</string>
+		<key>ownerUsername</key>
+		<string>ssmith123</string>
 	</dict>
 	<dict>
 		<key>name</key>

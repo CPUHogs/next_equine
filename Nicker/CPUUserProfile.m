@@ -100,6 +100,19 @@
     }
 }
 
+#pragma mark - Description
+-(NSString*)description {
+    return [NSString stringWithFormat:@"User Profile = [UserID = %@\nUsername = %@\nFirstName = %@\nLastName = %@\nCity = %@\nState = %@\nZip = %@\nPhone = %@]",
+            self.userId,
+            self.userName,
+            self.firstName,
+            self.lastName,
+            self.city,
+            self.state,
+            self.zipCode,
+            self.phoneNumber];
+}
+
 #pragma mark Private methods
 // perform setting and validation of the user input data
 -(BOOL)initWithData:(NSString*)userName
