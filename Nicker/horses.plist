@@ -19,6 +19,10 @@
 		<real>7500</real>
 		<key>birthdate</key>
 		<date>2017-02-08T02:51:01Z</date>
+		<key>description</key>
+		<string></string>
+		<key>disciplines</key>
+		<string></string>
 		<key>imageName</key>
 		<string>arnie.jpg</string>
 	</dict>
