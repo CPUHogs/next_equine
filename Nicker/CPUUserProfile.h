@@ -28,7 +28,7 @@
 -(instancetype)initWithNames:(NSString*)userName
                withFirstName:(NSString*)firstName
                 withLastName:(NSString*)lastName;
--(instancetype)initWithProfileData:(NSString*)userName
+-(instancetype)initWithUsername:(NSString*)userName
                      withFirstName:(NSString*)firstName
                       withLastName:(NSString*)lastName
                           withCity:(NSString*)city

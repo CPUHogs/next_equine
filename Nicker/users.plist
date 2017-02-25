@@ -4,19 +4,19 @@
 <array>
 	<dict>
 		<key>userName</key>
-		<string></string>
+		<string>ssmith123</string>
 		<key>firstName</key>
-		<string></string>
+		<string>Shelly</string>
 		<key>lastName</key>
-		<string></string>
+		<string>Smith</string>
 		<key>city</key>
-		<string></string>
+		<string>Spokane</string>
 		<key>state</key>
-		<string></string>
+		<string>WA</string>
 		<key>zipCode</key>
-		<string></string>
+		<string>98000</string>
 		<key>phoneNumber</key>
-		<string></string>
+		<string>555-456-7890</string>
 	</dict>
 </array>
 </plist>

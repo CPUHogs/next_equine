@@ -71,14 +71,14 @@
 }
 
 // initialize with all profile data
--(instancetype)initWithProfileData:(NSString*)userName
-                     withFirstName:(NSString*)firstName
-                      withLastName:(NSString*)lastName
-                          withCity:(NSString*)city
-                         withState:(NSString*)state
-                       withZipCode:(NSString*)zipCode
-                  withEmailAddress:(NSString*)emailAddress
-                   withPhoneNumber:(NSString*)phoneNumber {
+-(instancetype)initWithUsername:(NSString*)userName
+                  withFirstName:(NSString*)firstName
+                   withLastName:(NSString*)lastName
+                       withCity:(NSString*)city
+                      withState:(NSString*)state
+                    withZipCode:(NSString*)zipCode
+               withEmailAddress:(NSString*)emailAddress
+                withPhoneNumber:(NSString*)phoneNumber {
 
     if (self = [super init]) {
         if (![self initWithData:userName

@@ -22,8 +22,10 @@
 @implementation CPUViewModel
 
 #pragma mark - Initialization
+// initialize the profile data from the plist file
 -(instancetype) initWithData:(NSArray*)profileData {
     _horseProfiles = [NSMutableArray array];
+    // for each dictionary in the array, pull out all the data corresponding to the keys
     for (NSDictionary *dict in profileData) {
         CPUHorseProfile *profile =
         [[CPUHorseProfile alloc] initWithName:[dict objectForKey:@"name"]

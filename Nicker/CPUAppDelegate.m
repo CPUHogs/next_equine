@@ -9,6 +9,7 @@
 #import "CPUAppDelegate.h"
 #import "CPUViewController.h"
 #import "CPUHorseProfile.h"
+#import "CPUUserRepository.h"
 
 @interface CPUAppDelegate ()
 
@@ -37,6 +38,11 @@
     NSArray *arrayOfProfiles = [NSArray arrayWithContentsOfFile:plistPath];
     [self.viewController initializeData:arrayOfProfiles];
 
+    // user repos
+    NSString *userPlistPath = [[NSBundle mainBundle] pathForResource:@"users"
+                                                              ofType:@"plist"];
+    
+    [CPUUserRepository initFromPlist:userPlistPath];
     [self.window setRootViewController:navCon];
     [self.window makeKeyAndVisible];
 

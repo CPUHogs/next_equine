@@ -20,6 +20,8 @@
 		61C373AA1DE1456D00151548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C373A91DE1456D00151548 /* Assets.xcassets */; };
 		61C373AD1DE1456D00151548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C373AB1DE1456D00151548 /* LaunchScreen.storyboard */; };
 		61CF67F81E57F26E0068A491 /* CPUHorseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61CF67F71E57F26E0068A491 /* CPUHorseDetailViewController.m */; };
+		61DB62821E61209400F29767 /* CPUUserRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 61DB62811E61209400F29767 /* CPUUserRepository.m */; };
+		61DB62841E61252000F29767 /* users.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61DB62831E61252000F29767 /* users.plist */; };
 		61F0B86B1DE1749E00287E36 /* launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 61F0B86A1DE1749E00287E36 /* launch.jpg */; };
 		61F0B86F1DE177D300287E36 /* CPUHorseProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F0B86E1DE177D300287E36 /* CPUHorseProfile.m */; };
 		61F0B8711DE17FBE00287E36 /* horses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61F0B8701DE17FBE00287E36 /* horses.plist */; };
@@ -57,6 +59,9 @@
 		61C373AE1DE1456D00151548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61CF67F61E57F26E0068A491 /* CPUHorseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUHorseDetailViewController.h; sourceTree = "<group>"; };
 		61CF67F71E57F26E0068A491 /* CPUHorseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUHorseDetailViewController.m; sourceTree = "<group>"; };
+		61DB62801E61209400F29767 /* CPUUserRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUUserRepository.h; sourceTree = "<group>"; };
+		61DB62811E61209400F29767 /* CPUUserRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUUserRepository.m; sourceTree = "<group>"; };
+		61DB62831E61252000F29767 /* users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = users.plist; sourceTree = "<group>"; };
 		61F0B86A1DE1749E00287E36 /* launch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launch.jpg; sourceTree = "<group>"; };
 		61F0B86D1DE177D300287E36 /* CPUHorseProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUHorseProfile.h; sourceTree = "<group>"; };
 		61F0B86E1DE177D300287E36 /* CPUHorseProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUHorseProfile.m; sourceTree = "<group>"; };
@@ -148,6 +153,7 @@
 				61F0B86C1DE1751E00287E36 /* images */,
 				61C3739E1DE1456D00151548 /* main.m */,
 				61F0B8701DE17FBE00287E36 /* horses.plist */,
+				61DB62831E61252000F29767 /* users.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -198,6 +204,8 @@
 				61B0D8221E4AC2DA006DAE21 /* CPUHorseGender.m */,
 				610CB1B81E4FC41F0009FA24 /* CPUHorseColor.h */,
 				610CB1B91E4FC41F0009FA24 /* CPUHorseColor.m */,
+				61DB62801E61209400F29767 /* CPUUserRepository.h */,
+				61DB62811E61209400F29767 /* CPUUserRepository.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -282,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61F0B86B1DE1749E00287E36 /* launch.jpg in Resources */,
+				61DB62841E61252000F29767 /* users.plist in Resources */,
 				610CB1C31E4FD8A50009FA24 /* CPUHorseProfileDetailView.xib in Resources */,
 				61F0B8731DE24A8900287E36 /* arnie.jpg in Resources */,
 				61C373AD1DE1456D00151548 /* LaunchScreen.storyboard in Resources */,
@@ -357,6 +366,7 @@
 				61F0B8B01DE282FB00287E36 /* CPUViewModel.m in Sources */,
 				61B0D8231E4AC2DA006DAE21 /* CPUHorseGender.m in Sources */,
 				61C3739F1DE1456D00151548 /* main.m in Sources */,
+				61DB62821E61209400F29767 /* CPUUserRepository.m in Sources */,
 				61F0B8B51DE291FE00287E36 /* CPUHorseProfileTableViewCell.m in Sources */,
 				610CB1BA1E4FC41F0009FA24 /* CPUHorseColor.m in Sources */,
 				61F0B86F1DE177D300287E36 /* CPUHorseProfile.m in Sources */,
